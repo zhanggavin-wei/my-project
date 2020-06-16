@@ -71,3 +71,10 @@ git clone https://github.com/arcliang/Vue-Devtools-.git
 	4）重定向：从一个路径自动跳转到另一个路径 redirect
 	5）两种路由模式：History模式 vs.Hash模式
 	6）编程式导航：他会isrouter.push()/replace()
+	7）通配符：在定义一一对应的路由匹配关系时，path中可以使用 * 来匹配任意字符。
+	8）动态路由：`{path:'/detail/:id', component: Detail}`，在Detail组件中可以使用`this.route.params.id来接收参数。
+	9）路由传参：{path:'/detail/:id', component: Detail, props:true}props选项来接收参数。
+	10）嵌套路由：<router-view>组件可以进行多级嵌套，譬如/find/good这样的多级路由。
+	11）路由懒加载：一种性能优化方案，让组件可以在路由匹配成功时按需加载。
+	12）路由守卫：对路由匹配行为进行拦截，全局守卫使用router.beforeEach()，局部守卫使用beforeRouteEach()`，常常用于实现登录权限拦截功能。
+	13）watch侦听器，还可以监听 $route的变化。
