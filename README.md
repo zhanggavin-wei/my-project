@@ -63,6 +63,7 @@ git clone https://github.com/arcliang/Vue-Devtools-.git
 	Hash模式的唯一缺点：带有#号，难看
 	优点：
 	history优点是url是正常的，它的缺点是部署后刷新视图会找不到页面
+	
 5.路由的基础知识
 	1）命名视图：给router-view组件命名
 	2）路由别名：给路由匹配关系取个小名 alias
