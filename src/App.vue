@@ -3,11 +3,20 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- <world></world> -->
-    <router-view></router-view>
+    <router-view name="ddd"></router-view>
+    <router-view name="aaa"></router-view>
+    <router-view name="bbb"></router-view>
+    <router-view name="ccc"></router-view>
+    
     <div class="tabs">
-      <router-link to="/home" tag="span" active-class='on'>首页</router-link>
+      <!-- <router-link to="/home" tag="span" active-class='on'>首页</router-link>
+      <router-link to="/abc" tag="span" active-class='on'>商品</router-link>
       <router-link to="/find" tag="span" active-class='on'>发现</router-link>
-      <router-link to="/user" tag="span" active-class='on'>我的</router-link>
+      <router-link to="/user" tag="span" active-class='on'>我的</router-link> -->
+      <span @click='skip(1)' :class="on">首页</span>
+      <span @click='skip(2)' :class="on">商品</span>
+      <span @click='skip(3)' :class="on">发现</span>
+      <span @click='skip(4)' :class="on">我的</span>
     </div>
   </div>
 </template>
@@ -26,7 +35,29 @@ export default {
       console.log(i)
     }
     console.log('mounted')
+    console.log('1',this.$rouetr)
+    console.log('2',this.$rouet)
   },
+  methods:{
+    skip(idx){
+      switch(idx){
+        case 1:
+        // this.$router.replace('/home')
+        this.$router.push('/home')
+        break
+        case 2:
+        this.$router.replace('/abc')
+        break
+        case 3:
+        this.$router.replace('/find')
+        break
+        case 4:
+        this.$router.replace('/user')
+        break
+      }
+      
+    }
+  }
 }
 </script>
 
@@ -56,7 +87,7 @@ html,body{
   border: 1px solid #ccc;
   line-height: 80px;
 }
-.tabs span on{
+.tabs span.on{
   color:red;
 }
 .box{

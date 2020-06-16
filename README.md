@@ -54,3 +54,11 @@ git clone https://github.com/arcliang/Vue-Devtools-.git
 	 在入口文件main.js中引入路由实例并挂载
 	 在App.js组件中，使用内置组件<router-view></router-view>容器来放置匹配成功的组件
 	 使用<router-link></router-link>实现页面的跳转
+3、路由的三个问题
+	1）安装与配置：设计路径和组件的匹配关系(一一对应的关系)router.js配置
+	2）和路径url匹配成功的组件，放在哪里进行展示？(<routr-view></router-view>)
+	3)如何改变url？(router-link,编程式路由)
+4、Hash和history的区别
+	Hash模式的唯一缺点：带有#号，难看
+	优点：
+	history优点是url是正常的，它的缺点是部署后刷新视图会找不到页面

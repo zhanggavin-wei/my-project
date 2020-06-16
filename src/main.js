@@ -5,9 +5,9 @@ import App from './App.vue'
 //关闭项目且启动的生产提示
 Vue.config.productionTip = false
 //创建根组件实例
-import router from './router.js'
+import xxxx from './router.js'
 new Vue({
-  router,
+  router:xxxx,//xxxx也可以是router，router可以只写一个
   render: h => h(App),
 }).$mount('#app')
 //$mount()手动挂载
