@@ -22,7 +22,7 @@
 
       <!-- 声明式导航 -->
       <router-link to="/home" tag="span" active-class='on'>首页</router-link>
-      <router-link to="/abc" tag="span" active-class='on'>商品</router-link>
+      <router-link to="/abc" tag="span" active-class='on'>分类</router-link>
       <router-link to="/find" tag="span" active-class='on'>发现</router-link>
       <router-link to="/cart" tag="span" active-class='on'>购物车</router-link>
        <router-link to="/user" tag="span" active-class='on'>我的</router-link>
@@ -40,6 +40,7 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 // import World from './components/World'
+// import fetch from '@/utils/fetch'
 export default {
   name: 'App',
   //监听器可以监听路由和计算属性的变化
@@ -61,6 +62,53 @@ export default {
     //console.log('路由', this.$route)
     //console.log('路由', this.$router)
     console.log('Vuex' ,this.$store)
+    //调用cnode接口
+    // fetch({
+    //   url: '/topics',
+    //   method: 'GET',
+    //   params: {page:1,limit:5,tab:'ask',mdrender:'false'}
+    // }).then(res=>{
+    //   console.log('请求成功', res)
+    // })
+    let params = {
+      ct:24,
+      qqmusic_ver:1298,
+      new_json:1,
+      remoteplace:'txt.yqq.song',
+      searchid: 54616638128860322,
+      t:0,
+      aggr:1,
+      cr:1,
+      catZhida:1,
+      lossless:0,
+      flag_qc:0,
+      p:1,
+      n:10,
+      w:'%E5%91%A8%E6%9D%B0%E4%BC%A6',
+      g_tk_new_20200303:5381,
+      g_tk:5381,
+      loginUin:0,
+      hostUin:0,
+      format:'json',
+      inCharset:'utf8',
+      outCharset:'utf-8',
+      notice:0,
+      platform:'yqq.json',
+      needNewCode:0
+    }
+    console.log(params)
+    // 调用QQ音乐接口
+    fetch({
+      url: '/soso/fcgi-bin/client_search_cp',
+      method: 'GET',
+      params: params
+    }).then(res=>{
+      console.log('QQ', res)
+    }).catch(err=>{
+      console.log('QQ', err)
+    }).finally(()=>{
+      console.log('无论成功或失败，我都会被打印出来')
+    })
   },
   //编程式导航的事件处理
   // methods:{

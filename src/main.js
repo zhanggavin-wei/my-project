@@ -5,7 +5,7 @@ import App from './App.vue'
 //关闭项目且启动的生产提示
 Vue.config.productionTip = false
 
-import store from './store'
+import store from './store/index'
 //创建根组件实例
 import xxxx from './router.js'
 new Vue({
