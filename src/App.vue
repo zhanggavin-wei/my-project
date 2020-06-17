@@ -42,6 +42,12 @@
 // import World from './components/World'
 export default {
   name: 'App',
+  //监听器可以监听路由和计算属性的变化
+  // watch:{
+  // $route:function(to,from){
+  //     consloe.log(to,from)
+  //   }
+  // },
   components: {
     // HelloWorld,
     // World
@@ -52,8 +58,9 @@ export default {
     // .push()  路由栈（先进后出）
     // .replace()
     // 声明式导航和编程式导航，怎么灵活使用呢？答：如果是侧边栏类似的导航建议用声明式导航，如果按钮跳转时使用编程式导航。
-    console.log('路由', this.$route)
-    console.log('路由', this.$router)
+    //console.log('路由', this.$route)
+    //console.log('路由', this.$router)
+    console.log('Vuex' ,this.$store)
   },
   //编程式导航的事件处理
   // methods:{
@@ -108,7 +115,7 @@ html,body{
   border: 1px solid #ccc;
   line-height: 80px;
 }
-.tabs span .on{
+.tabs span.on{
   color:red;
 }
 .box{

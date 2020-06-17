@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1 class="home">首页</h1>
+    <h1 class="home">首页<span v-text='$store.state.msg'></span></h1>
+    <h1 v-text='$store.getters.msg2'></h1>
     <div class="list">
         <!-- 声明式导航写法（不建议） -->
       <!-- <div v-for="item in goods" :key="item.id">

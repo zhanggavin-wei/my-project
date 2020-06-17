@@ -5,11 +5,11 @@ Vue.use(VueRouter)
 //引入三个页面组件
 
 //建议使用路由懒加载，以节省项目性能
-const Home=()=>import('./page/Home.vue')
-const Find=()=>import('./page/Find.vue')
-const User=()=>import('./page/User.vue')
-const Detail=()=>import('./page/Detail.vue')
-const Cart=()=>import('./page/Cart.vue')
+const Home=()=>import('./pages/Home.vue')
+const Find=()=>import('./pages/Find.vue')
+const User=()=>import('./pages/User.vue')
+const Detail=()=>import('./pages/Detail.vue')
+const Cart=()=>import('./pages/Cart.vue')
 
 // 不建议以下写法
 // import Home from './pages/Home.vue'
